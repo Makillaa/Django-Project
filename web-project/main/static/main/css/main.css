@@ -1,0 +1,89 @@
+body {
+    background: #ffffff;
+}
+/**/
+aside {
+    float: left;  /*расположение меню*/
+    background: #2c2c2c;
+    width: 20%;  /*ширина меню*/
+    padding: 2.5% 1% 2.5% 2.5%;  /*отступы*/
+    height: 100vh;  /*100% высоты экрана*/
+    color: #ffffff;
+    border-right: 5px solid #4d4d4d;  /*обводка с правой стороны, ширина 5 пикселей, сплошная, цвет*/
+}
+
+aside img {
+    width: 120px;
+    float: left;  /*позиционирование*/
+    margin-left: -18px;
+}
+
+aside .logo {
+    font-size: 50px;  /*размер шрифта*/
+    margin-left: 17px;
+    font-weight: bold;  /*насыщенность(начертание) шрифта: жирный*/
+    position: relative;  /*позиционирование элемента: relative - положение установлено относительно его исходного места*/
+    top: 18px;  /*смещение от первоначального расположения*/
+    text-decoration: none;
+    color: #ffffff;
+}
+
+aside h3 {
+    margin-top: 60px;
+    font-size: 34px;  /*размер шрифта*/
+}
+
+aside ul {list-style: none;}  /*убираем маркировку*/
+
+aside ul li {
+    color: #ffffff;
+    display: block;  /*блочные элементы друг за другом вниз*/
+    margin-top: 20px;
+    transition: transform .3s ease;  /*плавность для transform(который увеличивает текст при наведении)*/
+}
+/*несколько тегов, hover - отвечает за наведение на ссылку*/
+aside ul li:hover, aside ul a:hover, a {
+    color: cadetblue;
+    text-decoration: none;  /*убираем подчеркивание*/
+    transform: scale(1.06);  /*увеличиваем текст при наведении на 6%*/
+}
+
+i {
+    margin: 3px;  /*отступ иконок от текста*/
+}
+
+main .features {
+    float: left;  /*позиционирование объекта слева*/
+    color: #4d4d4d;  /*цвет текста*/
+    margin-top: 100px;
+    text-align: center;  /*расположение текста*/
+    width: 75%;  /*ширина блока текста*/
+}
+
+main .features h1 {font-size: 50px;}  /*размер текста*/
+main .features p {
+    max-width: 400px;   /*максимально допустимая ширина текста*/
+    margin: 20px auto;  /* отступ сверху и снизу 20 пикселей, остальное автоматически(по бокам)*/
+}
+
+.alert-dark{
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+}
+
+iframe{
+    float: left;
+    clear: both;
+    width: 800px;
+    margin: 20px 20%;
+    height: 480px;
+}
+
+form{
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
