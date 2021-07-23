@@ -10,19 +10,19 @@ class ArticlesForm(ModelForm):  # Создание формы и подсоед�
         widgets = {
             'title': TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Название статьи'
+                'placeholder': 'Article title'
             }),
             'anons': TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Анонс статьи'
+                'placeholder': 'Article announcement'
             }),
             'date': DateTimeInput(attrs={
                 'type': 'date',
                 'class': 'form-control',
-                'placeholder': 'Дата публикации'
+                'placeholder': 'Date of publication'
             }),
             'full_text': TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Текст статьи'
+                'placeholder': 'Article text'
             }),
         }

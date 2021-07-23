@@ -17,20 +17,28 @@
     <aside>
         <a href="{% url 'home'%}"><img src="{% static 'main/img/bear_bull.png' %}" alt="Logo"></a>
         <a href="{% url 'home'%}"><span class="logo">TRALE</span></a>
-        <h3>Navigation</h3>
         <!-- i - икоконки-->
         <ul>
-            <a href="{% url 'home'%}"><li><i class="fas fa-home"></i>Главная</li></a>
-            <a href="{% url 'about'%}"><li><i class="fas fa-users"></i>Про нас</li></a>
-            <a href="{% url 'news_home'%}"><li><i class="fas fa-newspaper"></i>Новости</li></a>
-            <a href="{% url 'home'%}"><li><i class="fas fa-paper-plane"></i>Контакты</li></a>
-            <a href="{% url 'create'%}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить запись</button></li></a>
+            <a href="{% url 'home'%}"><li><i class="fas fa-home"></i>Main</li></a>
+            <a href="{% url 'about'%}"><li><i class="fas fa-users"></i>Author</li></a>
+            <a href="{% url 'news_home'%}"><li><i class="fas fa-newspaper"></i>News</li></a>
         </ul>
     </aside>
     <!--Динамически изменяемое содержание(контент)-->
     <main>
         {% block content %}
         {% endblock %}
+        <footer>
+            <ul class="socials">
+                <a href="tg://resolve?domain=Makillaa"><li><i class="fab fa-telegram"></i>Telegram</li></a>
+                <a href="https://linkedin.com/in/makillaa" target="_blank"><li><i class="fab fa-linkedin"></i>Linkedin</li></a>
+                <a href="https://github.com/Makillaa" target="_blank"><li><i class="fab fa-github-square"></i>GitHub</li></a>
+            </ul>
+                <a href="{% url 'home'%}"><img src="{% static 'main/img/bear_bull.png' %}" alt="Logo" class="f-logo"></a>
+            <div class="m-block">
+                <a href="mailto:1999gmo@gmail.com"><i class="fas fa-envelope"></i>1999gmo@gmail.com</a>
+            </div>
+        </footer>
     </main>
 </body>
 </html>

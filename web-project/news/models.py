@@ -2,10 +2,10 @@ from django.db import models
 
 
 class Articles(models.Model):
-    title = models.CharField('Название', max_length=50)
-    anons = models.CharField('Анонс', max_length=250)
-    full_text = models.TextField('Статья')
-    date = models.DateTimeField('Дата публикации')
+    title = models.CharField('Article', max_length=50)
+    anons = models.CharField('Аnnouncement', max_length=250)
+    full_text = models.TextField('Content')
+    date = models.DateTimeField('Date of publication')
 
     def __str__(self):  # возвращаем каждый раз название самого объекта
         return self.title
@@ -14,5 +14,5 @@ class Articles(models.Model):
         return f'/news/{self.id}'
 
     class Meta:
-        verbose_name = 'Новость'
-        verbose_name_plural = 'Новости'
+        verbose_name = 'News'
+        verbose_name_plural = 'News'

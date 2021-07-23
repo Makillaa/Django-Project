@@ -3,18 +3,19 @@
 {% block title %}News{% endblock %}
 
 {% block content %}
-    <div class="features">  <!--создали класс в диве-->
-        <h1>New news in crypto</h1>
+<a href="{% url 'create'%}"><li><button class="btn btn-dark"><i class="fas fa-plus-circle"></i>Add a note</button></li></a>
+    <div class="shadowbox">  <!--создали класс в диве-->
+        <h1>Latest news</h1>
         {% if news %} {# Если записи есть - тогда их выводим, если нет - пишем, что записей нет #}
             {% for el in news %}
                 <div class="alert alert-dark">
                     <h3>{{el.title}}</h3>
                     <p>{{el.anons}}</p>
-                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Читать детальнее</a>
+                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Read more</a>
                 </div>
             {% endfor %}
         {% else %}
-            <p>У вас нет записей!</p>
+            <p>Posts do not exist at the moment</p>
         {% endif %}
     </div>
 {% endblock %}

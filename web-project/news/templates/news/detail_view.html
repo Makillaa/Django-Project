@@ -7,7 +7,10 @@
         <h1>{{ article.title }}</h1>
         <p>{{ article.date }}</p>
         <p>{{ article.full_text }}</p>
-        <a href="{% url 'news-delete' article.id %}" class="btn btn-danger">Delete</a>
-        <a href="{% url 'news-update' article.id %}" class="btn btn-info">Edit</a>
+        <div class="buttons">
+            <a href="{% url 'news-delete' article.id %}" class="delete-article">Delete</a>
+            <a href="{% url 'news-update' article.id %}" class="edit-article">Edit</a>
+        </div>
     </div>
+
 {% endblock %}

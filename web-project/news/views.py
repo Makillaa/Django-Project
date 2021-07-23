@@ -9,6 +9,7 @@ def news_home(request):
     news = Articles.objects.order_by('-date')
     return render(request, 'news/news_home.html', {'news': news})
 
+
 class NewsDetailView(DetailView):
     model = Articles  # сама модель
     template_name = 'news/detail_view.html'  # шаблон
@@ -17,7 +18,7 @@ class NewsDetailView(DetailView):
 
 class NewsUpdateView(UpdateView):
     model = Articles  # сама модель
-    template_name = 'news/create.html'  # шаблон
+    template_name = 'news/news_update.html'
 
     form_class = ArticlesForm  # указываем какой класс будет использоваться для отображения формы(в самом классе
     # прописаны стили уже)
